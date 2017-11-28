@@ -13,11 +13,12 @@ io.on('connection', function(socket){
     socket.emit('getPlayers', players);
     socket.broadcast.emit('newPlayer', {id:socket.id});
 
-    socket.on('ping', function(data){
-        var d = new Date();
-        var now = d.getTime();
-        socket.emit('ping', {data.id:now});
-    });
+    //socket.on('ping', function(data){
+    //    var d = new Date();
+     //   var now = d.getTime();
+	//data.id = socket.id;
+     //   socket.emit('ping', {data.id:now});
+    //});
 
 
     socket.on('playerMoved', function(data) {
